@@ -7,7 +7,7 @@
  * 1) replace with one group member's name
  *
  *
- * 2) replace with another group member's name
+ * 2) Joseph Capper
  *
  *
  * 3) 3rd member if a group of 3 only
@@ -24,7 +24,7 @@ public class Collaborate
         System.out.println("And another modifies between the previous and this...");
         
         System.out.println("And another modifies after this...");
-        
+        System.out.println("blah blah blah");
         System.out.println("git will save you from a copy and paste disaster.");
         
     }
