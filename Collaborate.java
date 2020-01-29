@@ -4,7 +4,7 @@
  *
  * @author Jim Teresco, modified by group members:
  * 
- * 1) replace with one group member's name
+ * 1) Nathan Poirier
  *
  *
  * 2) replace with another group member's name
@@ -20,7 +20,7 @@ public class Collaborate
     public static void main(String args[]) {
      
         System.out.println("If one modifies above this line...");
-        
+        System.out.println("Hello it's Nate");
         System.out.println("And another modifies between the previous and this...");
         
         System.out.println("And another modifies after this...");
