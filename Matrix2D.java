@@ -134,7 +134,16 @@ public class Matrix2D
             return false;
         }
 
-        //add your code here
+        for(int row = 0; row < data.length; row++)
+        {
+            for(int col = 0; col < data.length; col++)
+            {
+                if(data[row][col] != otr.data[row][col])
+                {
+                    return false;
+                }
+            }
+        }
 
         return true;
     }
@@ -158,16 +167,14 @@ public class Matrix2D
             throw new Matrix2DSizeMismatchException(data.length, other.data.length);
         }
         Matrix2D newMatrix = new Matrix2D(data.length);
-        
         for(int row = 0; row < data.length; row++)
         {
             for(int col = 0; col < data.length; col++)
             {
-                newMatrix.set(row,col,data.get(row,col) + other.data[row][col]);
+                //newMatrix.set(row,col,data.get(row,col) + other.data.get(row,col));
                 
             }
         }
-        
         return newMatrix;
     }
 
@@ -178,7 +185,13 @@ public class Matrix2D
      */
     public void scale(int by)
     {
-        //add your code here
+        for(int row = 0; row < data.length; row++)
+        {
+            for(int col = 0; col < data.length; col++)
+            {
+                data[row][col] = (data[row][col]) * by;
+            }
+        }
     }
 
     /**
