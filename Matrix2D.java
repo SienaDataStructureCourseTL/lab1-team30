@@ -103,9 +103,18 @@ public class Matrix2D
      */
     public int maxValue()
     {
-        //add your code here
-        
-        return -1;
+        int largest = data[0][0];
+        for(int row = 0; row < data.length; row++)
+        {
+            for(int col = 0; col < data.length; col++)
+            {
+                if(data[row][col] > largest)
+                {
+                    largest = data[row][col];
+                }
+            }
+        }
+        return largest;
     }
     
     /**
@@ -148,10 +157,18 @@ public class Matrix2D
         if (data.length != other.data.length) {
             throw new Matrix2DSizeMismatchException(data.length, other.data.length);
         }
-
-        //add your code here
+        Matrix2D newMatrix = new Matrix2D(data.length);
         
-        return null;
+        for(int row = 0; row < data.length; row++)
+        {
+            for(int col = 0; col < data.length; col++)
+            {
+                newMatrix.set(row,col,data.get(row,col) + other.data[row][col]);
+                
+            }
+        }
+        
+        return newMatrix;
     }
 
     /**
