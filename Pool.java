@@ -71,7 +71,16 @@ public class Pool
     {
         int count = 0;
 
-        //add your code here
+        for(int row = 0; row < luckyDay.length; row++)
+        {
+            for(int col = 0; col < luckyDay[0].length; col++)
+            {
+                if(luckyDay[row][col] == null)
+                {
+                    count++;
+                }
+            }
+        }
         
         return count;
     }
@@ -104,8 +113,17 @@ public class Pool
     public double poolTotal()
     {
         double total = 0.0;
-
-        //add your code here
+        Entry p = new Entry(" ",2.0);
+        for(int row = 0; row < luckyDay.length; row++)
+        {
+            for(int col = 0; col < luckyDay[0].length; col++)
+            {
+                if(luckyDay[row][col] != null)
+                {
+                    total = total + p.getAmount();
+                }
+            }
+        }
         
         return total;
     }
